@@ -1,0 +1,137 @@
+.notes-page {
+  display: flex;
+  height: calc(100vh - 70px - 72px);
+  min-height: 500px;
+}
+
+/* Sidebar */
+.notes-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--bg-card, #fff);
+  border-right: 1px solid #ede9fe;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px;
+  overflow-y: auto;
+}
+
+.new-note-btn {
+  width: 100%;
+  padding: 10px;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 14px;
+  transition: opacity 0.2s;
+}
+.new-note-btn:hover { opacity: 0.88; }
+
+.no-notes { color: #aaa; text-align: center; font-size: 13px; margin-top: 20px; }
+
+.note-item {
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: background 0.15s;
+  border: 1px solid transparent;
+}
+.note-item:hover  { background: #f5f3ff; }
+.note-item.active { background: #ede9fe; border-color: #c4b5fd; }
+
+.note-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
+}
+.note-item-title { font-size: 14px; font-weight: 600; color: var(--text,#1e1b4b); flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.del-note { background: none; border: none; color: #ccc; cursor: pointer; font-size: 13px; }
+.del-note:hover { color: #ef4444; }
+.note-subject-tag { font-size: 11px; color: #7c3aed; background: #ede9fe; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-top: 4px; }
+
+/* Editor */
+.notes-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  overflow-y: auto;
+  background: var(--bg, #f5f3ff);
+}
+
+.editor-top {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.note-title-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  background: var(--bg-card,#fff);
+  color: var(--text,#1e1b4b);
+}
+.note-title-input:focus { border-color: #7c3aed; }
+.editor-top select {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  background: var(--bg-card,#fff);
+  color: var(--text,#1e1b4b);
+}
+
+.note-content {
+  flex: 1;
+  min-height: 300px;
+  padding: 16px;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.7;
+  resize: none;
+  font-family: inherit;
+  outline: none;
+  background: var(--bg-card,#fff);
+  color: var(--text,#1e1b4b);
+}
+.note-content:focus { border-color: #7c3aed; }
+
+.editor-actions { display: flex; gap: 12px; margin: 14px 0; flex-wrap: wrap; }
+.save-btn { padding: 10px 22px; background: #7c3aed; color: #fff; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; }
+.ai-btn { padding: 10px 22px; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; }
+.ai-btn.summarize { background: #dbeafe; color: #2563eb; }
+.ai-btn.quiz      { background: #d1fae5; color: #059669; }
+.ai-btn:disabled  { opacity: 0.5; cursor: not-allowed; }
+
+.ai-summary {
+  background: #f5f3ff;
+  border-left: 4px solid #7c3aed;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.summary-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.summary-header button { background: none; border: none; cursor: pointer; color: #aaa; font-size: 16px; }
+
+/* Quiz */
+.quiz-box { background: var(--bg-card,#fff); border-radius: 14px; padding: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+.quiz-box h3 { color: #4c1d95; margin-bottom: 16px; }
+.quiz-question { margin-bottom: 18px; }
+.quiz-question p { font-weight: 600; margin-bottom: 10px; color: var(--text,#1e1b4b); }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-option { display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 8px; cursor: pointer; background: #f9fafb; border: 1.5px solid #e5e7eb; font-size: 14px; }
+.quiz-option.correct { background: #d1fae5; border-color: #10b981; }
+.quiz-option.wrong   { background: #fee2e2; border-color: #ef4444; }
+.submit-quiz { padding: 10px 28px; background: #7c3aed; color: #fff; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; margin-top: 8px; }
+.quiz-score { font-size: 18px; font-weight: 700; color: #4c1d95; margin-top: 12px; text-align: center; padding: 16px; background: #ede9fe; border-radius: 10px; }

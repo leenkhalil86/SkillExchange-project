@@ -1,0 +1,86 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f3ff;
+  color: #1e1b4b;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ══════════════════════════════════════
+   DARK MODE
+══════════════════════════════════════ */
+body.dark { background-color: #0f0e1a; color: #e2e0ff; }
+
+/* Cards & white surfaces */
+body.dark .feature-card,
+body.dark .about-card,
+body.dark .stat-card,
+body.dark .todo-form,
+body.dark .todo-item,
+body.dark .login-card,
+body.dark .register-card,
+body.dark .chat-window,
+body.dark .upcoming-tasks,
+body.dark .quick-links,
+body.dark .history,
+body.dark .notes-sidebar,
+body.dark .note-item,
+body.dark .quiz-box,
+body.dark .modal,
+body.dark .cal-day,
+body.dark .plan-item,
+body.dark .focus-music,
+body.dark .session-item { background-color: #1a1830; color: #e2e0ff; }
+
+/* Inputs & textareas */
+body.dark input,
+body.dark textarea,
+body.dark select,
+body.dark .note-title-input,
+body.dark .note-content { background-color: #1a1830; color: #e2e0ff; border-color: #2d2a6e; }
+
+/* Backgrounds */
+body.dark .home,
+body.dark .dashboard,
+body.dark .todo-page,
+body.dark .pomodoro-page,
+body.dark .notes-editor,
+body.dark .planner-page,
+body.dark .ai-main { background-color: #0f0e1a; }
+
+/* Text muted */
+body.dark .todo-sub,
+body.dark .dash-header p,
+body.dark .day-name,
+body.dark .plan-meta { color: #9ca3af; }
+
+/* Progress bar track */
+body.dark .progress-bar { background-color: #2d2a6e; }
+
+/* Pomodoro bg */
+body.dark .pomodoro-page { color: #e2e0ff; }
+body.dark .time-text { color: #e2e0ff; }
+body.dark circle[stroke="#e5e7eb"] { stroke: #2d2a6e; }
+
+/* Badges */
+body.dark .badge.cat  { background: #2d2a6e; color: #a78bfa; }
+body.dark .empty-msg  { color: #6b7280; }
+
+/* Login/Register page bg */
+body.dark .login-page,
+body.dark .register-page { background: linear-gradient(135deg, #0f0e1a, #1a1830); }
+
+/* Summary */
+body.dark .ai-summary { background: #1a1830; border-color: #7c3aed; }
+
+/* History items */
+body.dark .hist-item.work        { background: #1e1060; }
+body.dark .hist-item.short_break { background: #064e3b; }
+body.dark .hist-item.long_break  { background: #1e3a5f; }
+
+/* Week nav */
+body.dark .week-nav button { background: #1a1830; color: #e2e0ff; border-color: #2d2a6e; }
+body.dark .week-nav span   { color: #e2e0ff; }

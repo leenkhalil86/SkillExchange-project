@@ -1,0 +1,36 @@
+.register-page {
+  min-height: 85vh;
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 40px 36px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.15);
+  text-align: center;
+}
+
+.register-card h2 { color: #4c1d95; margin-bottom: 6px; }
+.register-btn {
+  width: 100%;
+  padding: 13px;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 6px;
+}
+.register-btn:hover { opacity: 0.9; }
+.extra { margin-top: 20px; color: #555; }
+.extra a { color: #7c3aed; font-weight: 600; text-decoration: none; }
